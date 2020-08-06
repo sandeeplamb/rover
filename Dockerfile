@@ -98,7 +98,7 @@ ENV versionTerraform=${versionTerraform} \
 #
 RUN echo ${versionRover} > /usr/bin/version.txt
 #
-# Common Tools
+# Common libs
 #
 RUN echo "Installing common tools" && \
     yum -y install \
