@@ -202,8 +202,6 @@ RUN mkdir -p /tmp/scripts/rover /tmp/scripts/sshd && \
 FROM base
 
 # Arguments set during docker-compose build -b --build from .env file
-ARG versionTfsec
-
 ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=${USER_UID}
@@ -211,7 +209,6 @@ ARG SSH_PASSWD
 
 ENV SSH_PASSWD=${SSH_PASSWD} \
     USERNAME=${USERNAME} \
-    versionTfsec=${versionTfsec} \
     TF_DATA_DIR="/home/${USERNAME}/.terraform.cache" \
     TF_PLUGIN_CACHE_DIR="/home/${USERNAME}/.terraform.cache/plugin-cache"
      
